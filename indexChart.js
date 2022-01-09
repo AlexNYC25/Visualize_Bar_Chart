@@ -58,6 +58,10 @@ d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/mas
             .attr("data-gdp", (d, i) => d[1]) // user story 6, 8: data is sorted by provided data order
             .attr("fill", "navy")
             .attr("class", "bar")
+            .append("title")
+            .text((d,i) => d[0] + ' ' + '$' + d[1] + ' Billion')
+            .attr("id", "tooltip")
+            .attr("data-date", (d, i) => d[0])
 
     })
 
